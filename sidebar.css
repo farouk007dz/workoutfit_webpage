@@ -1,0 +1,47 @@
+.sidebar{
+    font-family: roboto;
+    text-align: left ;
+    display: inline flex;
+    flex-direction: column;
+
+}
+.p{
+    border-bottom-color: black;
+}
+.checkbox{
+    padding-left: 8%;
+}
+
+.price-input-box{
+    width: 50%;
+}
+.price-sort p {
+    display: inline;
+    
+}
+.price-sort div {
+    padding-left: 16%;
+    padding-bottom: 2%;
+}
+.titre{
+    text-align: center;
+}
+.sidebar{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 58px;  
+    background-color: rgb(233, 233, 233);
+    width: 200px;
+    border-radius: 3px;
+}
+@media screen and (max-width: 835px){
+    .sidebar{
+        display: none;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .sidebar{
+        display: none;
+    }
+}
