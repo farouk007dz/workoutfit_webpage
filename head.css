@@ -56,6 +56,12 @@
 .sidebar-2-button{
     display: none;
 }
+@media screen and (min-width: 835px){
+    #searchToggle,#searchButton,#searchBar{
+        display: none;
+    }
+
+}
 @media screen and (max-width: 835px){
     .header-links{
         display: none;
@@ -67,6 +73,7 @@
     .wof-logo-2{
         display: inline-flex; 
         height: 50px;
+        padding-left: 12%;
         
     }
     .search-bar{
@@ -81,52 +88,47 @@
         display: inline-flex;
         background-color: white;
         border: none;
+        height: 100%;
     }
-    .search-button{
-        display: inline-flex;
-        height: 40px;
-        width: 50px;
-        background-color: white;
-        border: none;
-        margin-top: 15%;
+    .search-img{
+        width: 40px;
+        margin-top: 8px;
     }
-}
-@media only screen and (max-width: 767px) {
-    .header-links{
-        display: none;
-    }
-    .wof-logo{
-        display: none; 
+    #searchToggle {
+        display: none; /* Hide the checkbox */
     }
     
-    .wof-logo-2{
-        display: inline-flex; 
-        height: 50px;
+    #searchButton {
+        cursor: pointer;
         
     }
-    .search-bar{
-        display: none;
+    
+    #searchBar {
+        display: none; /* Initially hide the search bar */
+        position: fixed;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
     }
-    .sidebar-2{   
-        width: 35px;
-        margin-top: 25%;
-        margin-left: 10px;
+    
+    #searchToggle:checked ~ #searchBar {
+        display: block; /* Show the search bar when checkbox is checked */
     }
-    .sidebar-2-button{
-        display: inline-flex;
-        background-color: white;
-        border: none;
+    .search-bar-2{
+        margin-top: 10px;
+        height: 50%;
+        width: 75%;
+        margin-left: 12%;
+        border-width: 2px;
+        border-radius: 3px;
+        font-size: 100%;
     }
-    .search-button{
-        display: inline-flex;
-        height: 40px;
-        width: 50px;
-        background-color: white;
-        border: none;
-        margin-top: 15%;
-    }
+    
 }
-
         /*body.css*/
 body {
     overflow-x: hidden;
@@ -143,6 +145,7 @@ body {
     margin-left: 10px;
     row-gap: 0%;
     height: 10px;
+    text-align: center;
     
 }
 .product-grid{
@@ -160,6 +163,7 @@ body {
     
     width: 100%;
     border-radius: 5px;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
 }
 
 .product-brand{
@@ -191,8 +195,9 @@ body {
 @media screen and (max-width: 835px){
     .product-grid{
         padding-left: 0;
+        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
     }
-    
+   
 }
 
         /* sidebar.css */
@@ -234,13 +239,59 @@ body {
     width: 200px;
     border-radius: 3px;
 }
+.filter-button{
+    margin-left: 25%;
+    margin-top: 10%;
+    width: 50%;
+    height: 25%;
+    font-family: roboto;
+    background-color: black;
+    color: white;
+    border-radius: 2px;
+}
+
 @media screen and (max-width: 835px){
     .sidebar{
         display: none;
     }
-}
-@media only screen and (max-width: 767px) {
-    .sidebar{
-        display: none;
+
+    #sidebarToggle {
+        display: none; /* Hide the checkbox */
     }
+    
+    #sidebarToggle + label {
+        position: fixed;
+        
+        
+        z-index: 9999;
+        
+        color: #fff;
+        
+        cursor: pointer;
+    }
+    
+    #sidebarToggle:checked + label + #sidebar {
+        left: 0; /* Show the sidebar when checkbox is checked */
+    }
+    
+    #sidebar {
+        font-family: roboto;
+        width: 250px;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: -250px; /* Initially hidden */
+        background-color: rgb(233, 233, 233);
+        
+        transition: left 0.3s ease; /* Smooth transition */
+    }
+    
 }
+.div1{
+    text-align: center;
+    font-family: roboto;
+}
+hr {
+    width: 80vw;
+}
+

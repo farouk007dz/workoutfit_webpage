@@ -4,7 +4,7 @@
     <title>Work.Out.Fit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="head.css">
-   
+    <link rel="shortcut icon" type="image/png" href="pictures/wof_shortcut.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -12,10 +12,72 @@
 <body>
     <div class="header">
         <div class="left-setion">
-            <img class="wof-logo" src="pictures/workoutfit.logo.png" alt=""> 
-            <button class="sidebar-2-button">
+            <img class="wof-logo" src="pictures/workoutfit.logo.png" alt="">     
+            <input type="checkbox" class="sidebar-2-button" id="sidebarToggle">
+            <label for="sidebarToggle">
                 <img class="sidebar-2" src="icons/hamburger-menu.svg" alt="">
-            </button>
+            </label>
+            <div id="sidebar" >
+                <h3 class="titre">FILTER & SORT</h3>
+                
+                <h4 class="titre">SORT BY</h4>
+                <div>
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <label for="checkbox">Price: Low To heigh</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <label for="checkbox">Price: heigh To Low</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <label for="checkbox">Relevancy</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <label for="checkbox">Newest</label>
+                    </div>
+                </div>
+                <h4 class="titre">BRAND</h4>
+                <div>
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <label for="checkbox">Gymshark</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <label for="checkbox">Youngla</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <label for="checkbox">Underarmor</label>
+                    </div>
+                </div>
+                <h4 class="titre">SEXE</h4>
+                <div>
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <label for="checkbox">Men</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <label for="checkbox">Women</label>
+                    </div>
+                </div>
+                <h4 class="titre">PRICE</h4>
+                <div class="price-sort">
+                    <div>
+                        <p>Min &nbsp;:</p>
+                        <input class="price-input-box" type="number" placeholder="DZD">
+                    </div>
+                    <div>
+                        <p>Max :</p>
+                        <input class="price-input-box" type="number" placeholder="DZD">
+                    </div> 
+                    <button class="filter-button">FILTER</button>
+                </div>
+            </div>
             
         </div>
         <div class="middele-section">
@@ -36,12 +98,17 @@
         </div>
         <div class="right-section">
             <input class="search-bar" type="text" placeholder="  Search">
-            <button class="search-button">
-                <img class="search-img" src="icons/search.svg" alt="">
-            </button>
+            <input type="checkbox" id="searchToggle">
+            <label for="searchToggle" id="searchButton"><img class="search-img" src="icons/search.svg" alt=""></label>
+            <div id="searchBar">
+                <input class="search-bar-2" type="text" placeholder="Search...">
+                <button class="filter-button" type="submit">Submit</button>
+            </div>
+               
+            
         </div>
     </div>
-    <div class="sidebar">
+    <div class="sidebar" >
         <h3 class="titre">FILTER & SORT</h3>
         
         <h4 class="titre">SORT BY</h4>
@@ -99,6 +166,7 @@
                 <p>Max :</p>
                 <input class="price-input-box" type="number" placeholder="DZD">
             </div> 
+            <button class="filter-button">FILTER</button>
         </div>
     </div>
     <div class="product-grid">
@@ -210,6 +278,13 @@
                 <p class="product-price">2800 DZD</p>
             </div>
         </div>
+    </div>
+    <div class="bottom-description">
+        <div class="div1">
+            <hr>
+            <p>&copy; 2024 WORKOUTFIT, Inc</p>
+        </div>
+     
     </div>
     
 </body>
